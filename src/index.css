@@ -1,0 +1,250 @@
+@tailwind base;
+@layer base {
+  h6 {
+    @apply text-base font-openSans-semibold;
+  }
+  h2 {
+    @apply text-[3.125rem] font-openSans-medium;
+  }
+  h3 {
+    @apply text-[2rem] font-openSans-semibold;
+  }
+  h6 {
+    @apply text-base font-openSans-semibold;
+  }
+  a {
+    @apply font-openSans-regular;
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  font-size: 12px;
+  overflow-x: hidden;
+  @screen md {
+    font-size: 16px;
+  }
+}
+
+/* font family initialization */
+
+/* 300 weight */
+@font-face {
+  font-family: "roboto-light";
+  src: url(./assets/fonts/roboto/Roboto-Light.ttf);
+}
+/* 400 weight */
+@font-face {
+  font-family: "openSans-regular";
+  src: url(./assets/fonts/openSans/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: "roboto-regular";
+  src: url(./assets/fonts/roboto/Roboto-Regular.ttf);
+}
+/* 500 weight */
+@font-face {
+  font-family: "openSans-medium";
+  src: url(./assets/fonts/openSans/OpenSans-Medium.ttf);
+}
+/* 600 weight */
+@font-face {
+  font-family: "openSans-semibold";
+  src: url(./assets/fonts/openSans/OpenSans-SemiBold.ttf);
+}
+@font-face {
+  font-family: "roboto-bold";
+  src: url(./assets/fonts/roboto/Roboto-Bold.ttf);
+}
+/* style */
+::-webkit-scrollbar-track {
+  @apply bg-transparent mb-2
+}
+::-webkit-scrollbar-thumb {
+  @apply rounded-3xl bg-primary
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-[#555]
+}
+::-webkit-scrollbar {
+  @apply w-2
+}
+.custom-scroll:hover::-webkit-scrollbar-thumb {
+  @apply visible transition-opacity duration-200
+}
+.custom-scroll::-webkit-scrollbar {
+  @apply w-1 h-1
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  @apply invisible
+}
+
+.page-Footnotes{
+  @apply w-[90%] 2xl:w-4/5 m-auto
+}
+header{
+  @apply py-5 bg-secondary
+}
+header .nav-link{
+  @apply text-lg font-roboto-regular
+}
+nav {
+  @apply bg-secondary
+}
+nav a{
+  @apply text-base
+}
+footer .desc{
+  @apply font-openSans-regular text-base leading-8 my-8
+}
+footer h6{
+  @apply uppercase mb-5
+}
+footer a{
+  @apply text-base capitalize
+}
+footer .copyright{
+  @apply text-base bg-primary  font-openSans-regular
+}
+
+.banner-title{
+  @apply text-[4.625rem] font-roboto-light 
+}
+.banner-desc{
+  @apply text-3xl font-roboto-regular leading-[3.125rem] mt-8 mb-14
+}
+.btn-primary{
+  @apply capitalize text-[1.813rem] font-roboto-regular bg-primary text-white w-fit flex items-center gap-x-2 px-8 py-4 cursor-pointer
+}
+.btn-default{
+  @apply capitalize text-[1.813rem] font-roboto-regular bg-white text-primary w-fit flex items-center gap-x-2 px-8 py-4 cursor-pointer
+}
+.item-card{
+  @apply w-fit
+}
+.item-card .price{
+  @apply text-base font-openSans-semibold
+}
+.item-card .category{
+  @apply text-base font-openSans-regular text-tertiary
+}
+.newsletter input{
+  @apply w-3/4 text-base font-roboto-bold outline-0 placeholder:text-tertiary border-b-2 px-3 pb-1 border-b-primary
+}
+.newsletter button{
+  @apply text-base font-openSans-regular text-primary border-b-2 px-3 pb-1 border-b-primary
+}
+.collection{
+  @apply w-3/4 m-auto lg:absolute lg:right-10 lg:bottom-1/2 lg:translate-y-1/2 lg:w-2/5
+}
+.collection-desc{
+  @apply text-[1.625rem] font-roboto-regular text-white my-14 
+}
+.logo{
+  @apply w-[12.5rem]
+}
+.item-card img, .insta-section img {
+  @apply transition-transform duration-500 ease-in-out;
+}
+
+.item-card img:hover {
+  @apply scale-105;
+}
+
+.insta-section img:hover {
+  @apply scale-75;
+}
+/* logo starter animation */
+.logo-svg {
+  @apply lg:scale-150
+}
+
+svg.logo-svg .svg-elem-1 {
+  fill: transparent;
+  stroke: black;
+  stroke-width: 0.5;
+  stroke-dasharray: 590.53125px;
+  stroke-dashoffset: 590.53125px;
+  animation: draw 5s forwards;
+}
+
+svg.logo-svg .svg-elem-2,
+svg.logo-svg .svg-elem-3,
+svg.logo-svg .svg-elem-4,
+svg.logo-svg .svg-elem-5,
+svg.logo-svg .svg-elem-6,
+svg.logo-svg .svg-elem-7 {
+  stroke: black;
+  fill: transparent;
+  stroke-dasharray: 42.425px;
+  stroke-dashoffset: 42.425px;
+  animation: strokeDraw 2s forwards;
+}
+
+svg.logo-svg .svg-elem-1 {
+  animation-delay: 0s;
+}
+
+svg.logo-svg .svg-elem-2 {
+  animation-delay: 0.12s;
+}
+
+svg.logo-svg .svg-elem-3 {
+  animation-delay: 0.24s;
+}
+
+svg.logo-svg .svg-elem-4 {
+  animation-delay: 0.36s;
+}
+
+svg.logo-svg .svg-elem-5 {
+  animation-delay: 0.48s;
+}
+
+svg.logo-svg .svg-elem-6 {
+  animation-delay: 0.6s;
+}
+
+svg.logo-svg .svg-elem-7 {
+  animation-delay: 0.72s;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 590.53125px;
+    fill: transparent;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    fill: rgb(0, 0, 0);
+  }
+}
+
+@keyframes strokeDraw {
+  0% {
+    stroke-dashoffset: 42.425px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+}
+
+#start-up{
+  @apply w-full h-screen  grid grid-cols-2 fixed z-10
+}
+#start-up .right-door{
+  @apply origin-right h-full bg-secondary
+}
+#start-up .left-door{
+  @apply origin-left h-full bg-secondary
+}
+
+
+
+
